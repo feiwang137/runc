@@ -44,10 +44,12 @@ func (s *MemoryGroup) Apply(d *cgroupData) (err error) {
 			// error when people use `cgroupsPath` to join an existed
 			// cgroup whose kernel memory is not initialized.
 
-			// debug: disable kernel memory acccounting.....
+			// debug: disable kernel memory accounting.....
 			//if err := EnableKernelMemoryAccounting(path); err != nil {
 			//	return err
 			//}
+
+			fmt.Println("[guandata-debug].... skip EnableKernelMemoryAccounting.")
 
 		}
 	}
