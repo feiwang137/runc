@@ -43,6 +43,8 @@ func (s *MemoryGroup) Apply(d *cgroupData) (err error) {
 			// is created by libcontainer, otherwise we might get
 			// error when people use `cgroupsPath` to join an existed
 			// cgroup whose kernel memory is not initialized.
+
+			// debug: disable kernel memory acccounting.....
 			//if err := EnableKernelMemoryAccounting(path); err != nil {
 			//	return err
 			//}
