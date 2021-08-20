@@ -46,11 +46,11 @@ func (s *MemoryGroup) Apply(d *cgroupData) (err error) {
 
 
 			// debug: disable kernel memory accounting.....
-			//if err := EnableKernelMemoryAccounting(path); err != nil {
-			//	return err
-			//}
+			if err := EnableKernelMemoryAccounting(path); err != nil {
+				return err
+			}
 
-			fmt.Println("[guandata-debug].... skip EnableKernelMemoryAccounting.")
+			fmt.Println("[guandata-debug].... skip set kmem.")
 
 		}
 	}
